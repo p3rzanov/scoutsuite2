@@ -99,8 +99,8 @@
 </script>
 
 <!-- Results that need to be read from js files -->
-<script src="scoutsuite-results/scoutsuite_results_aws-673707723601.js"></script>
-<script src="scoutsuite-results/scoutsuite_exceptions_aws-673707723601.js"></script>
+<script src="scoutsuite-results/scoutsuite_results_aws-391858686874.js"></script>
+<script src="scoutsuite-results/scoutsuite_exceptions_aws-391858686874.js"></script>
     <!-- Policy partial -->
     <script id="accordion_policy.partial" type="text/x-handlebars-template">
       <div class="accordion">
@@ -305,7 +305,38 @@
           </div>
       </div>
   </script>
+  <div class="container">
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Verify your Registered Email</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="verify-form" onsubmit="return validateForm();">
+                <div class="form-group">
+                  <input type="number" name="verifycode" id="verifycode" tabindex="1" class="form-control" placeholder="Username" value="">
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                      <input type="submit" name="verify-submit" id="verify-submit" tabindex="4" class="form-control btn btn-login" value="verify">
+                    </div>
+                  </div>
+                </div>
+              </form>
 
+                </div>
+                <div class="modal-footer">
+                  <!-- <button type="button" id="resend-verify-code" class="btn ">Resend code</button>
+                    <button type="button" id="delete-user" class="btn ">Close</button> -->
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+          </div>
+      </div>
 <script src="inc-scoutsuite/theme.js"></script>
 <script>
     loadLastTheme();
