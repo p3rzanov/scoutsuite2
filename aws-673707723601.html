@@ -214,6 +214,30 @@
                 </li>
               </ul>
             </li>
+            <li class="nav-item" id="signupBtn">
+              <a href="#" data-toggle="dropdown"  class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1">Sign up</a>
+              <ul class="dropdown-menu form-wrapper">
+                <li>
+                  <form id="register-form" onsubmit="return validateForm();">
+                    <p class="hint-text">Create your ScoutSuite Account!</p>
+                  <div class="form-group">
+                          <input type="text" name="username" id="regusername" tabindex="1" class="form-control" placeholder="Username" value="">
+                        </div>
+                        <div class="form-group">
+                          <input type="email" name="email" id="regemail" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                        </div>
+                        <div class="form-group">
+                          <input type="password" name="password" id="regpassword" tabindex="2" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                          <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+                        </div>
+                    <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-primary btn-block" value="Sign up">
+
+                  </form>
+                </li>
+              </ul>
+            </li>
           </ul>
           <ul class="nav navbar-nav" id="scout_nav_up">
               {{#each items}}
@@ -303,40 +327,9 @@
               </li>
             </ul>
           </div>
-          <div class="modal fade" id="myModal" role="dialog">
-              <div class="modal-dialog">
-                <!-- Modal content-->
-                  <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Verify your Registered Email</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form id="verify-form" onsubmit="return validateForm();">
-                    <div class="form-group">
-                      <input type="number" name="verifycode" id="verifycode" tabindex="1" class="form-control" placeholder="Username" value="">
-                    </div>
-                    <div class="form-group">
-                      <div class="row">
-                        <div class="col-sm-6 col-sm-offset-3">
-                          <input type="submit" name="verify-submit" id="verify-submit" tabindex="4" class="form-control btn btn-login" value="verify">
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-
-                    </div>
-                    <div class="modal-footer">
-                      <!-- <button type="button" id="resend-verify-code" class="btn ">Resend code</button>
-                        <button type="button" id="delete-user" class="btn ">Close</button> -->
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-              </div>
-          </div>
       </div>
   </script>
 
-      <!-- Modal -->
 
 <script src="inc-scoutsuite/theme.js"></script>
 <script>
@@ -3550,7 +3543,39 @@ Handlebars.registerPartial("dashboard", $("#services\\.id\\.findings\\.partial")
         <div id="modal-container" class="modal fade" tabindex="-1" role="dialog"></div>
 
     </div>
+    <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                      <h4 class="modal-title">Verify your Registered Email</h4>
+                  </div>
+                  <div class="modal-body">
+                      <form id="verify-form" onsubmit="return validateForm();">
+                  <div class="form-group">
+                    <input type="number" name="verifycode" id="verifycode" tabindex="1" class="form-control" placeholder="Your verification code" value="">
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-sm-6 col-sm-offset-3">
+                        <input type="submit" name="verify-submit" id="verify-submit" tabindex="4" class="form-control btn btn-login" value="verify">
+                      </div>
+                    </div>
+                  </div>
+                </form>
 
+                  </div>
+                  <div class="modal-footer">
+                    <!-- <button type="button" id="resend-verify-code" class="btn ">Resend code</button>
+                      <button type="button" id="delete-user" class="btn ">Close</button> -->
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
 </body>
 
 

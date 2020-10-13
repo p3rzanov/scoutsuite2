@@ -283,7 +283,7 @@ AWSCognito.config.region = 'us-west-2';
               }
               console.log('call result: ' + result);
               $('#myModal').modal('hide');
-              alert('Email confirmed. Login to S3URL')
+              alert('Email confirmed. Login to ScoutSuite')
               //window.location.href = '/verify.html';
 
           });
